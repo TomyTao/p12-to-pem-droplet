@@ -1,26 +1,15 @@
 p12-to-pem-droplet
 ==================
+一个简单的小脚本，用于将P12文件转换为pem文件，只支持没有密码的P12文件
 
-Simple Apple Script Droplet that converts .p12 files (from APNS &mdash; Apple Push Notifications Service) to .pem format. 
+## 使用方法 
 
-## How to Use 
+- 下载当前仓库到本地 
+- 右键点击P12toPEM.scpt->打开方式->脚本编辑器
+- 在脚本编辑器中点击文件 -> 导出, 文件格式选择应用程序
+- 不用启动应用程序，直接将P12文件拖动到应用程序的图标上
+- .pem文件将会直接在应用程序所在目录中直接生成
 
-- Clone repo 
-- open P12toPEM.scpt in AppleScript Editor
-- Choose File -> Export, select File Format: Application, save app 
-- Drag and drop your p12 file to resulting Application 
-- .pem file will be created in the same dir 
+## 使用须知
 
-
-## Why 
-
-People often use Keychain Access app on Mac to generate private key, certificate request and import certificate. 
-
-OpenSSL-based solutions for sending push messages (Uniqush, Apns-PHP, etc) require certificate and private key to be in PEM format. 
-
-Convertion could be done using openssl command line, but GUI may be simplier. 
-
-
-## Known Issues 
-
-- Only p12 files with empty password are supported 
+- 只能将没有密码的P12文件转换成PEM文件 
